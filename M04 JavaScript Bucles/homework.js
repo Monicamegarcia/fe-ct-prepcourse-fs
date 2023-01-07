@@ -95,11 +95,11 @@ function esDiezOCinco(num) {
    // Retornar "true" si "num" es 10 o 5.
    // De lo contrario, retornar "false".
    // Tu código:
-   if (num == 10 || num == 5); {
-      return "True"
+   if (num == 10 || num == 5) {
+      return (true);
    }
-   if (num != 10 && num != 5); {
-      return "False"
+   if (num != 10 || 5){
+      return (false);
    }
 }
 
@@ -107,6 +107,12 @@ function estaEnRango(num) {
    // Retornar "true" si "num" es menor que 50 y mayor que 20.
    // De lo contrario, retornar "false".
    // Tu código:
+   if (num < 50 && num > 20) {
+      return (true);
+   }
+   else (num == undefined); {
+      return (false);
+   }
 }
 
 function esEntero(num) {
@@ -116,6 +122,16 @@ function esEntero(num) {
    // Ejemplo: (-10) ---> true
    // De lo contrario, retorna "false".
    // Tu código:
+   if (num % 1 == 0) {
+      return (true);
+   }
+   if (num === 0) {
+      return (true);
+   }
+
+   else {
+      return (false);
+   }
 }
 
 function fizzBuzz(num) {
@@ -124,6 +140,18 @@ function fizzBuzz(num) {
    // Si "num" es divisible entre 5, retorna "buzz".
    // De lo contrario, retorna el número.
    // Tu código:
+   if (num % 3 == 0 && num % 5 == 0) {
+      return "fizzbuzz"
+   }
+   if (num % 3 == 0) {
+      return "fizz"
+   }
+   if (num % 5 == 0) {
+      return "buzz"
+   }
+   else {
+      return (num);
+   }
 }
 
 function operadoresLogicos(num1, num2, num3) {
