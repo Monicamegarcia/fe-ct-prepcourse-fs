@@ -84,6 +84,12 @@ function esVocal(letra) {
    {
       return "Es vocal"
    }
+   if (letra.length !=1) {
+      return "Dato incorrecto"
+   }
+   if (letra != "A" || "E" || "I" || "O" || "U" || "a" || "e" || "i" || "o" || "u") {
+      return "Dato incorrecto"
+   }
 
    else {"Dato incorrecto"};
    
