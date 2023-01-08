@@ -162,6 +162,21 @@ function operadoresLogicos(num1, num2, num3) {
    // Si alguno de los argumentos es cero, retornar ---> "Error".
    // Si no se cumple ninguna de las condiciones anteriores, retornar false.
    // Tu código:
+   if (num1 > num2 && num1 > num3 && num1 > 0) {
+      return "Numero 1 es mayor y positivo"
+   }
+   if (num1 <0 || num2 < 0 || num3 < 0) {
+      return "Hay negativos"
+   }
+   if (num3 > num1 && num3 > num2) {
+      return (num3 + 1)
+   }
+   if (num1 == 0 || num2 == 0 || num3 == 0) {
+      return "Error";
+   }
+   else {
+      return (false);
+   }
 }
 
 function esPrimo(num) {
@@ -171,6 +186,10 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
+   for (num/num === 1 ; num/1 === num ; num > 1 ) {
+      return (True);
+   }
+   
 }
 
 function esVerdadero(valor) {
