@@ -100,8 +100,13 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código: 
-}
 
+   let array = Array.from(arguments);
+   if (Array.from(arguments) [0] === 0){
+      return 0};
+   return array.reduce((p,c)=>p*c);
+ }
+ 
 function cuentoElementos(array) {
    // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
    // Tu código:
@@ -123,12 +128,15 @@ function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar True si el entero inicia con 9 y False en otro caso.
    // Tu código:
+   let numero = num.toString();
+   return numero[0] == 9;
 }
 
 function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar True.
    // Caso contrario retornar False.
    // Tu código:
+   return array.every(e => array[0] == e);
 }
 
 function mesesDelAño(array) {
@@ -136,7 +144,30 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
-}
+   let mesesok = []
+ for (let i = 0; i < array.length; i++) {
+
+   if (array[i] === "Enero") {
+   
+      mesesok.push("Enero")};
+
+   if (array[i] === "Marzo") {
+      mesesok.push("Marzo");
+   }
+   
+   if (array[i] === "Noviembre") {
+      mesesok.push("Noviembre")}
+  
+   } 
+   
+   if (mesesok.length == 3) {
+      return mesesok;
+   };
+
+   return "No se encontraron los meses pedidos"
+
+   }
+
 
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
