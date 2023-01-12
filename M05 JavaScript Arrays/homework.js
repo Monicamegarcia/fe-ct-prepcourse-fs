@@ -144,7 +144,7 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
-   let mesesok = []
+let mesesok = []
  for (let i = 0; i < array.length; i++) {
 
    if (array[i] === "Enero") {
@@ -173,12 +173,23 @@ function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+   const numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+   let tablamultiplicar = [];
+   numeros.forEach((element) => tablamultiplicar.push(element * 6));
+   return tablamultiplicar;
 }
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
+   let mayores = []
+   for (i = 0; i < array.length; i++) {
+      if (array[i] > 100) {
+         mayores.push(array[i])
+      }
+   }
+   return mayores;
 }
 
 /* ----------------------------------------------------------------------------------
@@ -192,6 +203,30 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   /*let arreglo = []
+   let contador = 0
+   let suma = num
+   while (contador < 10){
+   arreglo.push(suma+=2); contador++;
+    if ( suma === contador) break;
+     return "Se interrumpió la ejecución"
+  }
+  return arreglo; //este da error
+}*/
+  var array = [];
+  var suma = num;
+  for (var i = 0; i < 10; i++) {
+    suma = suma + 2;
+    if (suma === i) break;
+    else {
+      array.push(suma);
+    }
+  }
+  if (i < 10) {
+    return "Se interrumpió la ejecución";
+  } else {
+    return array;
+  }
 }
 
 function continueStatement(num) {
@@ -201,8 +236,27 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
-}
 
+   /*let array = []
+   let i = 0
+   while (i < 10) {
+      i++; array.push(num+=2);
+   if (i === 5 && num === 5) continue; }
+   return array; 
+}*/ //no funciona
+
+var array = [];
+var suma = num;
+for (var i = 0; i < 10; i++) {
+  suma = suma + 2;
+  if (i===4) continue;
+  else {
+    array.push(suma);
+  }
+}
+   return array;
+
+}
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
    devolverPrimerElemento,
