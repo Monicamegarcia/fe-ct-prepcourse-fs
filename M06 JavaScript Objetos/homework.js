@@ -69,19 +69,26 @@ function tieneEmail(objetoUsuario) {
     if (objetoUsuario["email"] != null) {
     return true}
    return false;
-   
 }
 
 function tienePropiedad(objeto, propiedad) {
    // Verifica si el objeto recibido posee una propiedad con el mismo nombre que el parámetro "propiedad".
    // En ese caso retornar True. Caso contrario, False.
    // Tu código:
+  if (objeto.hasOwnProperty(propiedad)) {
+   return true;
+  }
+  return false;
 }
 
 function verificarPassword(objetoUsuario, password) {
-   // Verifica si la propiedad "password" del "objetoUsuario" coincide con el parámetro "password".
+   // Verifica si la "password" del "objetoUsuario" coincide con el parámetro "password".
    // En ese caso retornar True. Caso contrario, False.
    // Tu código:
+     if (objetoUsuario.password === password) {
+      return true;
+     }
+     return false;
 }
 
 function actualizarPassword(objetoUsuario, nuevaPassword) {
@@ -89,6 +96,8 @@ function actualizarPassword(objetoUsuario, nuevaPassword) {
    // La nueva contraseña la recibes por parámetro.
    // Retornar el objeto.
    // Tu código:
+   objetoUsuario["password"] = nuevaPassword;
+   return objetoUsuario;
 }
 
 function agregarAmigo(objetoUsuario, nuevoAmigo) {
@@ -96,6 +105,8 @@ function agregarAmigo(objetoUsuario, nuevoAmigo) {
    // Debes agregar el "nuevoAmigo" al final de este arreglo.
    // Retornar el objeto.
    // Tu código:
+   objetoUsuario.amigos.push(nuevoAmigo);
+   return objetoUsuario;
 }
 
 function pasarUsuarioAPremium(objetoMuchosUsuarios) {
@@ -104,6 +115,10 @@ function pasarUsuarioAPremium(objetoMuchosUsuarios) {
    // Define esta propiedad de todos los usuarios como True.
    // Retornar el arreglo.
    // Tu código:
+   for (let i = 0; i < objetoMuchosUsuarios.length; i++) {
+      objetoMuchosUsuarios[i].esPremium = true;
+   }
+   return objetoMuchosUsuarios;
 }
 
 function sumarLikesDeUsuario(objetoUsuario) {
@@ -112,6 +127,11 @@ function sumarLikesDeUsuario(objetoUsuario) {
    // Cada post posee una propiedad llamada "likes". Esta propiedad es un número.
    // Debes sumar los likes de todos los post y retornar el resultado.
    // Tu código:
+   let sumaLikes = 0;
+   for (let i = 0; i< objetoUsuario.posts.length; i++){
+      sumaLikes = sumaLikes + objetoUsuario.posts[i].likes;
+   }
+   return sumaLikes;
 }
 
 function agregarMetodoCalculoDescuento(objetoProducto) {
