@@ -35,19 +35,38 @@ function capToFront(string) {
    // Retornar el string.
    // [EJEMPLO]: soyHENRY ---> HENRYsoy
    // Tu código:
-}
+      var mayuscula = '';
+      var minuscula = '';
+      for (i = 0; i<string.length; i++){ 
+         if(string[i] === string[i].toUpperCase()){ 
+              mayuscula = mayuscula + string[i]; 
+           }
+       else {
+              minuscula = minuscula + string[i];
+            } 
+       }       
+      return (mayuscula + minuscula) 
+    }
 
 function asAmirror(frase) {
    // Recibes una frase. Tu tarea es retornar un nuevo string en el que el orden de las palabras sea el mismo.
    // La diferencia es que cada palabra estará escrita al inverso.
    // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
    // Tu código:
-}
-
+   let str = frase.split(" ").map(function(element){
+      return element.split("").reverse().join("")}).join(" ");
+      return str;
+   }
+   
 function capicua(numero) {
    // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
    // Caso contrario: "No es capicua".
    // Tu código:
+   const numeroAlReves = numero.toString().split("").reverse().join("");
+   if (numero == numeroAlReves){
+      return "Es capicua"
+   } return "No es capicua";
+   
 }
 
 function deleteAbc(string) {
